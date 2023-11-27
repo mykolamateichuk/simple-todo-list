@@ -15,6 +15,7 @@ class TaskListView(generic.ListView):
 
 class TagListView(generic.ListView):
     model = Tag
+    queryset = Tag.objects.prefetch_related("tasks")
     context_object_name = "tags"
 
 
