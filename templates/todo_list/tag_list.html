@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block content %}
+  <h2>
+    Tags
+    <a style="float: right"
+       href="{% url "todo_list:create_tag" %}"
+       class="btn btn-success link-to-page">
+      Create
+    </a>
+  </h2>
+
+	{% if tags %}
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      {% for tag in tags %}
+        <tr>
+          <td>{{ tag.name }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No tags!</p>
+  {% endif %}
+{% endblock %}
