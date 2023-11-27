@@ -2,11 +2,11 @@ from django.db import models
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=63, required=True)
+    name = models.CharField(max_length=63)
 
 
 class Task(models.Model):
-    content = models.CharField(max_length=255, required=True)
+    content = models.CharField(max_length=255)
     datetime = models.DateTimeField(auto_now_add=True)
     deadline = models.DateTimeField()
     is_done = models.BooleanField(default=False)
