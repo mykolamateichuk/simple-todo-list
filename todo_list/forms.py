@@ -21,9 +21,12 @@ class TaskCreateForm(forms.ModelForm):
         required=True
     )
 
+    deadline = forms.DateTimeField(
+        widget=DateInput(),
+        required=False
+    )
+
     class Meta:
         model = Task
         fields = "__all__"
-        widgets = {
-            "deadline": DateInput()
-        }
+

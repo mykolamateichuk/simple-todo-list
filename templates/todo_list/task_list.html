@@ -41,6 +41,9 @@
             <br>
             <br>
             <span class="text-muted">Created at: {{ task.datetime }}</span>
+            {% if task.deadline %}
+              <span style="color: darkred">Deadline: {{ task.deadline }}</span>
+            {% endif %}
             <br>
             <br>
             <span class="text-muted">Tags:
