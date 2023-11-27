@@ -6,7 +6,7 @@
     Tags
     <a style="float: right"
        href="{% url "todo_list:create_tag" %}"
-       class="btn btn-success link-to-page">
+       class="btn btn-primary link-to-page">
       Create
     </a>
   </h2>
@@ -23,11 +23,11 @@
           <td>{{ tag.name }}</td>
           <td>
             <a href="{% url "todo_list:update_tag" pk=tag.id %}"
-               class="btn btn-primary">Update</a>
+               class="btn btn-secondary">Update</a>
           </td>
           <td>
             <a href="{% url "todo_list:delete_tag" pk=tag.id %}"
-               class="btn btn-danger">Delete</a>
+               class="btn btn-secondary">Delete</a>
           </td>
         </tr>
       {% endfor %}
