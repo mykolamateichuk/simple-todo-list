@@ -99,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#AUTH_USER_MODEL = "todo_list.User"
+# AUTH_USER_MODEL = "todo_list.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
