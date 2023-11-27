@@ -21,8 +21,14 @@
       {% for tag in tags %}
         <tr>
           <td>{{ tag.name }}</td>
-          <td></td>
-          <td></td>
+          <td>
+            <a href="{% url "todo_list:update_tag" pk=tag.id %}"
+               class="btn btn-primary">Update</a>
+          </td>
+          <td>
+            <a href="{% url "todo_list:delete_tag" pk=tag.id %}"
+               class="btn btn-danger">Delete</a>
+          </td>
         </tr>
       {% endfor %}
     </table>

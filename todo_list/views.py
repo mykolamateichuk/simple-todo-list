@@ -23,3 +23,13 @@ class TagCreateView(generic.CreateView):
     form_class = TagCreateForm
     success_url = reverse_lazy("todo_list:tag_list")
 
+
+class TagUpdateView(generic.UpdateView):
+    model = Tag
+    form_class = TagCreateForm
+    success_url = reverse_lazy("todo_list:tag_list")
+
+
+class TagDeleteView(generic.DeleteView):
+    model = Tag
+    success_url = reverse_lazy("todo_list:tag_list")
