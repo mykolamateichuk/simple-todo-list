@@ -7,6 +7,9 @@ class Tag(models.Model):
     class Meta:
         ordering = ["name"]
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Task(models.Model):
     content = models.CharField(max_length=255)
@@ -14,3 +17,9 @@ class Task(models.Model):
     deadline = models.DateTimeField()
     is_done = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag, related_name="tasks")
+
+    class Meta:
+        ordering = ["is_done", "datetime"]
+
+    def __str__(self) -> str:
+        return self.content
